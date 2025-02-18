@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-02-2025 a las 02:14:01
+-- Tiempo de generación: 19-02-2025 a las 00:39:21
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -33,6 +33,27 @@ CREATE TABLE `artistas` (
   `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `artistas`
+--
+
+INSERT INTO `artistas` (`id`, `nombre`, `descripcion`) VALUES
+(1, 'slipknot', 'banda de metal'),
+(2, 'muse', 'banda de rock'),
+(3, 'ghostemane', 'musica pesada'),
+(4, 'Sxmpra', 'musica phonk'),
+(5, 'bruno mars', ''),
+(6, 'mac demarco', 'musica indie(chill de cojones)'),
+(7, 'queen', 'musica rock '),
+(8, 'Louis Armstrong', 'musica de jazz'),
+(9, 'Ella Fitzgerald', 'musica de jazz'),
+(10, 'metalica', 'musioca de metalica'),
+(11, 'ariana grande', 'esta grande y toca pop'),
+(12, 'akon', 'musica pop'),
+(13, 'eminem', 'musica hip hop'),
+(14, '50 cent', 'musica hip hop'),
+(15, 'snoop dogg', 'musica hip hop');
 
 -- --------------------------------------------------------
 
@@ -84,6 +105,20 @@ CREATE TABLE `genero` (
   `id` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `genero`
+--
+
+INSERT INTO `genero` (`id`, `nombre`) VALUES
+(1, 'rock'),
+(2, 'metal'),
+(3, 'heavymetal'),
+(4, 'phonk'),
+(5, 'jazz'),
+(6, 'pop'),
+(7, 'indie'),
+(9, 'hip hop');
 
 -- --------------------------------------------------------
 
@@ -216,7 +251,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artistas`
 --
 ALTER TABLE `artistas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `artistascanciones`
@@ -240,7 +275,7 @@ ALTER TABLE `favoritos`
 -- AUTO_INCREMENT de la tabla `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `membresias`
